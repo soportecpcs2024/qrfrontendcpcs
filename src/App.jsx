@@ -1,16 +1,15 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// App.jsx or index.jsx
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import MessagePage from './components/MessagePage';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-       <h3> hola QR</h3>
-    </>
-  )
+    <Router>
+      <Routes>
+        <Route path="/message/:id" element={<MessagePage />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;
