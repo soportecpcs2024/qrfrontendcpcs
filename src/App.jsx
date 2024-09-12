@@ -1,19 +1,16 @@
-// src/App.js
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import MessagePage from './components/MessagePage';
-import NotFoundPage from './components/NotFoundPage'; // Opcional, para manejar 404
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
 
 function App() {
+  const [count, setCount] = useState(0)
+
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<MessagePage id="1" />} /> {/* Ruta raíz para pruebas */}
-        <Route path="/message/:id" element={<MessagePage />} /> {/* Ruta dinámica para mensajes */}
-        <Route path="*" element={<NotFoundPage />} /> {/* Página 404 opcional */}
-      </Routes>
-    </Router>
-  );
+    <>
+       <h3> hola QR</h3>
+    </>
+  )
 }
 
-export default App;
+export default App
